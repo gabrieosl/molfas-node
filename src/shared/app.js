@@ -20,7 +20,7 @@ class App {
     this.server.use(express.json());
     this.server.use(
       '/avatars',
-      express.static(resolve(__dirname, '..', 'media', 'avatars'))
+      express.static(resolve(__dirname, '..', '..', 'media', 'avatars'))
     );
   }
 

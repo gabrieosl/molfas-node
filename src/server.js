@@ -1,3 +1,3 @@
-import app from './app';
+import app from './shared/app';
 
 app.listen(3334);
