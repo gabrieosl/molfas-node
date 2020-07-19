@@ -1,18 +1,18 @@
 import Sequelize from 'sequelize';
 
-import Customer from '../app/models/Customer';
-import Address from '../app/models/Address';
-import Order from '../app/models/Order';
-import Product from '../app/models/Product';
-import Subproduct from '../app/models/Subproduct';
-import Orderitem from '../app/models/Orderitem';
-import Rawmaterial from '../app/models/Rawmaterial';
-import Supplier from '../app/models/Supplier';
-import Mold from '../app/models/Mold';
-import Machine from '../app/models/Machine';
-import Productimage from '../app/models/Productimage';
-import User from '../app/models/User';
-import Avatar from '../app/models/Avatar';
+import Customer from '../apps/store/models/Customer';
+import Address from '../apps/store/models/Address';
+import Order from '../apps/admin/models/Order';
+import Product from '../apps/admin/models/Product';
+import Subproduct from '../apps/admin/models/Subproduct';
+import Orderitem from '../apps/admin/models/Orderitem';
+import Rawmaterial from '../apps/admin/models/Rawmaterial';
+import Supplier from '../apps/admin/models/Supplier';
+import Mold from '../apps/admin/models/Mold';
+import Machine from '../apps/admin/models/Machine';
+import Productimage from '../apps/admin/models/Productimage';
+import User from '../apps/admin/models/User';
+import Avatar from '../apps/admin/models/Avatar';
 
 import databaseConfig from '../config/database';
 
@@ -41,8 +41,10 @@ class Database {
     this.connection = new Sequelize(databaseConfig);
 
     models
-      .map(model => model.init(this.connection))
-      .map(model => model.associate && model.associate(this.connection.models));
+      .map((model) => model.init(this.connection))
+      .map(
+        (model) => model.associate && model.associate(this.connection.models)
+      );
   }
 }
 
