@@ -1,0 +1,9 @@
+{
+  "name": "default",
+  "type": "mongodb",
+  "host": "localhost",
+  "port": 27017,
+  "database": "molfas",
+  "useUnifiedTopology": true,
+  "entities": ["./dist/modules/**/infra/typeorm/schemas/*.ts", "./dist/modules/**/schemas/*.ts"]
+}
