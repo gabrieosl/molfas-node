@@ -1,9 +1,8 @@
 {
   "name": "default",
   "type": "mongodb",
-  "host": "localhost",
-  "port": 27017,
-  "database": "molfas",
+  "url": "mongodb+srv://gabrieosl:RFfdNzc927PaNSWo@cluster0.exhbg.mongodb.net/molfas?retryWrites=true&w=majority",
+  "useNewUrlParser": true,
   "useUnifiedTopology": true,
-  "entities": ["./src/modules/**/infra/typeorm/schemas/*.ts", "./src/modules/**/schemas/*.ts"]
+  "entities": ["./dist/modules/**/infra/typeorm/schemas/*.js", "./dist/modules/**/schemas/*.js"]
 }
