@@ -1,8 +1,0 @@
-{
-  "name": "default",
-  "type": "mongodb",
-  "url": "mongodb+srv://gabrieosl:RFfdNzc927PaNSWo@cluster0.exhbg.mongodb.net/molfas?retryWrites=true&w=majority",
-  "useNewUrlParser": true,
-  "useUnifiedTopology": true,
-  "entities": ["./dist/modules/**/infra/typeorm/schemas/*.ts", "./dist/modules/**/schemas/*.ts"]
-}
