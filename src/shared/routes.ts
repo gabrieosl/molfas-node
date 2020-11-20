@@ -20,4 +20,6 @@ routes.use('/sessions', sessionsRouter);
 routes.use('/password', passwordsRouter);
 routes.use('/profile', profileRouter);
 
+routes.get('/hello', (request, response) => response.status(204).send());
+
 export default routes;
