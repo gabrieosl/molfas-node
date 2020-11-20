@@ -38,6 +38,6 @@ app.use(
   },
 );
 
-app.listen(3333, () => {
-  console.log('Server is up');
+app.listen(process.env.APP_PORT, () => {
+  console.log(`Server is up on port ${process.env.APP_PORT}`);
 });
